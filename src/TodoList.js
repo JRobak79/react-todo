@@ -1,6 +1,7 @@
 import React from "react";
+import TodoListItem from "./TodoListItem";
 
-let todoList = [
+let todo = [
   { id: 1, title: "Finish 1.1" },
   { id: 2, title: "Read Meet the React Component" },
   { id: 3, title: "Read React JSX" },
@@ -11,8 +12,8 @@ let todoList = [
 export default function TodoList() {
   return (
     <ul>
-      {todoList.map((el) => {
-        return <li key={el.id}>{el.title}</li>;
+      {todo.map((item) => {
+        return <TodoListItem key={item.id} item={item} />;
       })}
     </ul>
   );
